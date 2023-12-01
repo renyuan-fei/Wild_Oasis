@@ -1,11 +1,10 @@
-import styled from "styled-components";
-import { format, isToday } from "date-fns";
+import styled from 'styled-components';
+import {format, isToday} from 'date-fns';
 
-import Tag from "../../ui/Tag";
-import Table from "../../ui/Table";
+import Tag from '../../ui/Tag';
+import Table from '../../ui/Table';
 
-import { formatCurrency } from "../../utils/helpers";
-import { formatDistanceFromNow } from "../../utils/helpers";
+import {formatCurrency, formatDistanceFromNow} from '../../utils/helpers';
 
 const Cabin = styled.div`
   font-size: 1.6rem;
@@ -35,52 +34,52 @@ const Amount = styled.div`
 `;
 
 function BookingRow({
-  booking: {
-    id: bookingId,
-    created_at,
-    startDate,
-    endDate,
-    numNights,
-    numGuests,
-    totalPrice,
-    status,
-    guests: { fullName: guestName, email },
-    cabins: { name: cabinName },
-  },
-}) {
-  const statusToTagName = {
-    unconfirmed: "blue",
-    "checked-in": "green",
-    "checked-out": "silver",
-  };
+                        booking: {
+                            id: bookingId,
+                            created_at,
+                            startDate,
+                            endDate,
+                            numNights,
+                            numGuests,
+                            totalPrice,
+                            status,
+                            guests: {fullName: guestName, email},
+                            cabins: {name: cabinName},
+                        },
+                    }) {
+    const statusToTagName = {
+        unconfirmed: 'blue',
+        'checked-in': 'green',
+        'checked-out': 'silver',
+    };
 
-  return (
-    <Table.Row>
-      <Cabin>{cabinName}</Cabin>
+    return (
+        <Table.Row>
+            <Cabin>{cabinName}</Cabin>
 
-      <Stacked>
-        <span>{guestName}</span>
-        <span>{email}</span>
-      </Stacked>
+            <Stacked>
+                <span>{guestName}</span>
+                <span>{email}</span>
+            </Stacked>
 
-      <Stacked>
+            <Stacked>
         <span>
           {isToday(new Date(startDate))
-            ? "Today"
-            : formatDistanceFromNow(startDate)}{" "}
-          &rarr; {numNights} night stay
+              ? 'Today'
+              : formatDistanceFromNow(startDate)}{' '}
+            &rarr; {numNights} night stay
         </span>
-        <span>
-          {format(new Date(startDate), "MMM dd yyyy")} &mdash;{" "}
-          {format(new Date(endDate), "MMM dd yyyy")}
+                <span>
+          {format(new Date(startDate), 'MMM dd yyyy')} &mdash;{' '}
+                    {format(new Date(endDate), 'MMM dd yyyy')}
         </span>
-      </Stacked>
+            </Stacked>
 
-      <Tag type={statusToTagName[status]}>{status.replace("-", " ")}</Tag>
+            <Tag type={statusToTagName[status]}>{status.replace('-', ' ')}</Tag>
 
-      <Amount>{formatCurrency(totalPrice)}</Amount>
-    </Table.Row>
-  );
+            <Amount>{formatCurrency(totalPrice)}</Amount>
+        </Table.Row>
+    );
 }
 
 export default BookingRow;

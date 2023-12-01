@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledCheckbox = styled.div`
   display: flex;
@@ -26,26 +26,32 @@ const StyledCheckbox = styled.div`
 `;
 
 interface CheckboxProps {
-  checked: boolean;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  disabled?: boolean;
-  id: string;
-  children: React.ReactNode;
+    checked: boolean;
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+    disabled?: boolean;
+    id: string;
+    children: React.ReactNode;
 }
 
-function Checkbox({ checked, onChange, disabled = false, id, children } : CheckboxProps) {
-  return (
-    <StyledCheckbox>
-      <input
-        type="checkbox"
-        id={id}
-        checked={checked}
-        onChange={onChange}
-        disabled={disabled}
-      />
-      <label htmlFor={!disabled ? id : ""}>{children}</label>
-    </StyledCheckbox>
-  );
+function Checkbox({
+                      checked,
+                      onChange,
+                      disabled = false,
+                      id,
+                      children,
+                  }: CheckboxProps) {
+    return (
+        <StyledCheckbox>
+            <input
+                type="checkbox"
+                id={id}
+                checked={checked}
+                onChange={onChange}
+                disabled={disabled}
+            />
+            <label htmlFor={!disabled ? id : ''}>{children}</label>
+        </StyledCheckbox>
+    );
 }
 
 export default Checkbox;

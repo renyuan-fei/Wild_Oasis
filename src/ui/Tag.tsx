@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface TagProps {
-    type: "primary" | "secondary" | "tertiary";
+    type: 'primary' | 'secondary' | 'tertiary';
 }
 
 const Tag = styled.span<TagProps>`

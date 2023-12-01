@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledModal = styled.div`
   position: fixed;
@@ -49,4 +49,4 @@ const Button = styled.button`
   }
 `;
 
-export { StyledModal, Overlay, Button };
+export {StyledModal, Overlay, Button};

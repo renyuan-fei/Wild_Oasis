@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledMenu = styled.div`
   display: flex;
@@ -61,4 +61,4 @@ const StyledButton = styled.button`
   }
 `;
 
-export { StyledMenu, StyledToggle, StyledButton };
+export {StyledMenu, StyledToggle, StyledButton};

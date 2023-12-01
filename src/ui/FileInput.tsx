@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const FileInput = styled.input`
   font-size: 1.4rem;

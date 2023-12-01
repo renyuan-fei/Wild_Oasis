@@ -30,4 +30,4 @@ const Box = styled.div`
   }
 `;
 
-export { StyledErrorFallback, Box}
+export {StyledErrorFallback, Box};

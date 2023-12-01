@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledDataItem = styled.div`
   display: flex;
@@ -26,16 +26,16 @@ interface Item {
     children: React.ReactNode;
 }
 
-function DataItem({ icon, label, children } : Item ) {
-  return (
-    <StyledDataItem>
-      <Label>
-        {icon}
-        <span>{label}</span>
-      </Label>
-      {children}
-    </StyledDataItem>
-  );
+function DataItem({icon, label, children}: Item) {
+    return (
+        <StyledDataItem>
+            <Label>
+                {icon}
+                <span>{label}</span>
+            </Label>
+            {children}
+        </StyledDataItem>
+    );
 }
 
 export default DataItem;

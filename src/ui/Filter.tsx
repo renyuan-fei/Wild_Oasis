@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, {css} from 'styled-components';
 
 const StyledFilter = styled.div`
   border: 1px solid var(--color-grey-100);
@@ -11,7 +11,7 @@ const StyledFilter = styled.div`
 `;
 
 interface FilterButtonProps {
-  active?: boolean;
+    active?: boolean;
 }
 
 const FilterButton = styled.button<FilterButtonProps>`
@@ -19,11 +19,11 @@ const FilterButton = styled.button<FilterButtonProps>`
   border: none;
 
   ${(props) =>
-    props.active &&
-    css`
-      background-color: var(--color-brand-600);
-      color: var(--color-brand-50);
-    `}
+          props.active &&
+          css`
+            background-color: var(--color-brand-600);
+            color: var(--color-brand-50);
+          `}
 
   border-radius: var(--border-radius-sm);
   font-weight: 500;
@@ -37,4 +37,4 @@ const FilterButton = styled.button<FilterButtonProps>`
   }
 `;
 
-export { StyledFilter, FilterButton };
+export {StyledFilter, FilterButton};

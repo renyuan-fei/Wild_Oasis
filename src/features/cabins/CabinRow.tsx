@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const TableRow = styled.div`
   display: grid;
@@ -38,3 +38,5 @@ const Discount = styled.div`
   font-weight: 500;
   color: var(--color-green-700);
 `;
+
+export {TableRow, Img, Cabin, Price, Discount}
