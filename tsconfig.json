@@ -20,7 +20,28 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    "paths": {
+    "@features/*": [
+      "./src/features/*"
+    ],
+    "@hooks/*": [
+      "./src/hooks/*"
+    ],
+    "@pages/*": [
+      "./src/pages/*"
+    ],
+    "@services/*": [
+      "./src/services/*"
+    ],
+    "@ui/*": [
+      "./src/ui/*"
+    ],
+    "@utils/*": [
+      "./src/utils/*"
+    ]
+  }
   },
   "include": [
     "src"
